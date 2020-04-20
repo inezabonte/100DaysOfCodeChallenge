@@ -18,7 +18,7 @@ console.log(solution('ElonMusk'));
 console.log(solution('JavaScript'));
 
 
-
+//Error in the code above help me find it
 
 
 
