@@ -1,35 +1,42 @@
 .main{
+    margin: auto;
     width: 620px;
     height: 620px;
     text-align: center;
 }
 
 h1{
-    font-family: monospace;
+    font-family: 'Concert One', cursive;
+    color: rgb(104, 67, 67);
 }
 
-
+body{
+     background: linear-gradient(35deg, rgb(39, 153, 153), rgb(197, 146, 146));
+     background-size: auto;
+     background-attachment: fixed;
+}
 
 .grid{
+    place-items: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     width: 610px;
     height: 610px;
-    background-color: black;
-    
 }
 
 .grid div{
     width: 200px;
     height: 200px;
-   background-color: white;
    margin-bottom: 5px;
+   background-color: rgb(212, 218, 188);
+  
    
 }
 
 .playerX{
     background-image: url('theX.png');
+
 
 }
 
