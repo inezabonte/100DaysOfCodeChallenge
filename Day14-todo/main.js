@@ -1,9 +1,10 @@
 let todoItems = [];
+
 function addTodo(text) {
     const todo = {
         text,
         checked: false,
-        id: Date.now(),
+        id: Date.now()
     }
 
     todoItems.push(todo);
@@ -38,7 +39,7 @@ function toggleDone(key) {
     item.remove();
   }
 
-const form = document. querySelector('.js-form');
+const form = document.querySelector('.js-form');
 form.addEventListener('submit', event => {
     event.preventDefault();
     const input = document.querySelector('.js-todo-input');
