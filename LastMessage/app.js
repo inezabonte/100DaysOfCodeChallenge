@@ -1,4 +1,6 @@
 let message = [];
+
+//I wish to display the message on screen for 2 seconds then remove them.
 function addMessage(text){
     const chat = {
         text,
@@ -7,16 +9,24 @@ function addMessage(text){
 
     message.push(chat);
     
+
     const list = document.querySelector('.messages');
     list.insertAdjacentHTML('beforeend', 
-        `<li class="message-item" data-key="${chat.id}">
+        `<p class="message-item" data-key="${chat.id}" id = "hide-me">
             <span>${chat.text}</span>
-        </li>`
+        </p>`
+
     );
-
-
+    
+    let token = setTimeout(() => {
+        clearTimeout(token);
+        Array.from(list.children).forEach((child) => 
+       list.removeChild(child))
+      },2000);
 
 }
+
+
 
 
 const form = document.querySelector('.message-form');
@@ -30,5 +40,6 @@ form.addEventListener('submit', event => {
         addMessage(text);
         input.value = '';
         input.focus();
+        
     }
 });

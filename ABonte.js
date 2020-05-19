@@ -1,6 +1,6 @@
-function startCountdown(seconds) {
+function startCountdown() {
     let message = [
-        "-----------------------------------",
+        "----------------------------------",
         "S O  T O D A Y", 
         "----------------------------------",
         "I S  S O M E O N E ' S", 
@@ -14,13 +14,13 @@ function startCountdown(seconds) {
         "M U S Y O K I",
         "----------------------------------", 
         "🔥🔥🔥🔥🔥🔥🔥🔥",
-        "-----------------------------------", 
+        "----------------------------------", 
         "🥳🥳🥳🥳🥳🥳🥳🥳🥳",
-        "-----------------------------------", 
+        "----------------------------------", 
         "H A P P Y  B I R T H D A Y  B R O",
-        "-----------------------------------"
+        "----------------------------------"
         ]
-    let counter = seconds;
+    let counter =0;
     let index = 0;
       
     const interval = setInterval(() => {
@@ -39,4 +39,4 @@ function startCountdown(seconds) {
     }, 1000);
   }
 
-  startCountdown(0);
+  startCountdown();
