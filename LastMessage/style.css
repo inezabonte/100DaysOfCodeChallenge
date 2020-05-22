@@ -13,10 +13,6 @@ body{
     border-radius: 5px;
 }
 
-
-    
-
-
 h4{
     font-family: 'Montserrat', sans-serif;
     text-align: center;
@@ -48,6 +44,7 @@ input{
     font-family: 'Montserrat', sans-serif;
 }
 
+/* display: inline-block will help us to avoid the text from  */
 .message-item span{
     display: inline-block;
     padding:10px;

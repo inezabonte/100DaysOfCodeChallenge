@@ -1,7 +1,9 @@
+//Create an array where the message along with it's ID will be stored.
 let message = [];
 
-//I wish to display the message on screen for 2 seconds then remove them.
+// This fuction will enables us to add the message to the DOM
 function addMessage(text){
+    //Object where message will be stored
     const chat = {
         text,
         id: Date.now()
@@ -18,22 +20,26 @@ function addMessage(text){
 
     );
     
+    // This will help us to delete the message from the screen after it appeared for 2 seconds
     let token = setTimeout(() => {
-        clearTimeout(token);
         Array.from(list.children).forEach((child) => 
        list.removeChild(child))
+       clearTimeout(token);
       },2000);
 
 }
 
 
 
-
+//Create event listener to detect when a message has been submitted
 const form = document.querySelector('.message-form');
 form.addEventListener('submit', event => {
     event.preventDefault();
+
+    //input to save the message itself
     const input = document.querySelector('.typedMessage');
 
+    //This helps us to detect empty messages and ignore them
     const text = input.value.trim();
 
     if(text !== ''){
