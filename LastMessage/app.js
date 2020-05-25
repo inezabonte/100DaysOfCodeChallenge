@@ -11,16 +11,16 @@ function addMessage(text){
 
     message.push(chat);
     
-
+    //Render message to the screen
     const list = document.querySelector('.messages');
     list.insertAdjacentHTML('beforeend', 
-        `<p class="message-item" data-key="${chat.id}" id = "hide-me">
+        `<p class="message-item" data-key="${chat.id}">
             <span>${chat.text}</span>
         </p>`
 
     );
     
-    // This will help us to delete the message from the screen after it appeared for 2 seconds
+    // Delete the message from the screen after 2 seconds
     let token = setTimeout(() => {
         Array.from(list.children).forEach((child) => 
        list.removeChild(child))
