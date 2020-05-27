@@ -4,7 +4,7 @@ function rgbToHex(col) {
     .replace(")", "")
     .split(",")
     .map(colour => parseInt(colour, 10).toString(16))
-    .map(colour => colour.length == 1 ? '0' + colour : colour)
+    .map(colour => ('0' + colour).slice(-2))
     .join("");
 }
 
