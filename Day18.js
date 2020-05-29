@@ -18,10 +18,10 @@
 function thirt(n) {
 
 while(n>99){
-    var b = 0;
-    var arr = [1, 10, 9, 12, 3, 4, 1, 10, 9, 12, 3, 4];
-    var a =n.toString().split('').reverse();
-    for (var i=0; i<a.length; i++) {
+    let b = 0;
+    let arr = [1, 10, 9, 12, 3, 4, 1, 10, 9, 12, 3, 4];
+    let a =n.toString().split('').reverse();
+    for (let i=0; i<a.length; i++) {
     b+= Number(a[i])* arr[i]; 
     }
     n=b;
