@@ -5,6 +5,8 @@ body{
 }
 
 .main{
+    display: flex;
+    flex-direction: column;
     width: 400px;
     margin: 0 auto;
     background-color: #f5f5dc;
@@ -53,7 +55,7 @@ input{
 }
 
 .submit{
-    padding: 7px;
+    padding: 8px;
     border-radius: 5px;
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
