@@ -1,17 +1,37 @@
+let result = []
+const tables = document.querySelector(".output")
 
 function multiply(num) {
     for (let i = 1; i <= 10; i++) {
-        console.log(`${num} X ${i} = ${num*i}`);
+        result.push(`${num} x ${i} = ${num*i}`);
     }
+
+    tables.insertAdjacentHTML('beforeend', `
+        <div class="check">
+            <span>${result.join('<br>')}</span>
+            <hr>
+        <div>
+    `
+    )
+
+    result = []
 }
 
 
 const form  = document.querySelector(".number-form");
 form.addEventListener('submit',event =>{
     event.preventDefault();
-    const number = document.querySelector(".mulplicant")
-    const final = number.value.trim();
+    const input = document.querySelector(".mulplicant")
+    const final = input.value.trim();
+    
+    const element =  document.querySelector('.check');
+    
 
-    multiply(final);
+    function removeAdd() {
+        element.parentNode.removeChild(element);
+        multiply(final);
+    }
+
+    element ? removeAdd() : multiply(final);
     
 })
