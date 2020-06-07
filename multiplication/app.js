@@ -3,7 +3,7 @@ const tables = document.querySelector(".output")
 
 function multiply(num) {
     for (let i = 1; i <= 10; i++) {
-        result.push(`${num} x ${i} = ${num*i}`);
+        result.push(`${num} &times ${i} = ${num*i}`);
     }
 
     tables.insertAdjacentHTML('beforeend', `
