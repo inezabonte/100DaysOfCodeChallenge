@@ -1,24 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Padauk&display=swap');
-body{
-    background-color: #DCDCF5;
+
+:root {
+    --primary-color: #dcdc99;
+    --secondary-color: #EAEAB4;
+    --main-font: 'Montserrat', sans-serif;
+    --text-color: black;
 }
 
-.main{
+[data-theme="dark"] {
+    --primary-color: #121212;
+    --secondary-color: #2B2B2B;
+    --main-font: 'Montserrat', sans-serif;
+    --text-color: white;
+} 
+
+body{
+    background-color: var(--secondary-color);
+}
+
+.container{
     display: flex;
     flex-direction: column;
     width: 400px;
     margin: 0 auto;
-    background-color: #f5f5dc;
+    background-color: var(--primary-color);
     padding: 10px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
     border-radius: 5px;
 }
 
 h4{
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--main-font);
     text-align: center;
     padding: 10px;
+    color: var(--text-color);
     
 }
 
@@ -27,6 +43,7 @@ h5{
     text-align: center;
     font-size: 17px;
     opacity: 0.5;
+    color: var(--text-color);
 
 }
 
@@ -36,30 +53,87 @@ input{
     margin-bottom: 10px;
     border-radius: 4px;
     border-style: none;
-    border: 1px solid rgba(180, 180, 234, 0.164);
-    background-color: #EAEAB4;
-    font-size: 12px;
-    font-weight: 600; 
+    background-color: var(--secondary-color);
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--text-color);
 }
 
 .messages{
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--main-font);
+    color: var(--text-color);
 }
 
 /* display: inline-block will help us to avoid the text from  */
 .message-item span{
     display: inline-block;
     padding:10px;
-    background-color: #EAEAB4;
+    background-color: var(--secondary-color);
     border-radius: 10px;
 }
 
 .submit{
     padding: 8px;
     border-radius: 5px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--main-font);
     font-size: 15px;
     color: white;
-    background-color: #EAB4EA;
+    background-color: #3636C9;
     border-style: none;
 }
+
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+
+  }
+
+  .theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+  }
+  
+  .theme-switch input {
+    display:none;
+  }
+  
+  .slider {
+    background-color: #c7c786;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+  }
+  
+  input:checked + .slider {
+    background-color: #3636C9;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  

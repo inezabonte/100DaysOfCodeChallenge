@@ -5,7 +5,16 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="main">
+
+    <div class="theme-switch-wrapper">
+    <label class="theme-switch" for="checkbox">
+        <input type="checkbox" id="checkbox" />
+        <div class="slider round"></div>
+  </label>
+</div>
+   
+    <div class="container">
+        
         <h4>A Message You would like to pass</h4>
 
         <!-- Where we will wite the message and submit it -->
@@ -17,9 +26,8 @@
         <!-- Where message will be output for two seconds -->
         <h5>Last Message Delivered</h5>
         <div class="messages"></div>
-
     </div>
-    
+   
     <script src="app.js"></script>
 </body>
 </html>
