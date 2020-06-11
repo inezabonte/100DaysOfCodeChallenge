@@ -1,0 +1,14 @@
+.container{
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 2fr 1fr 1fr;
+    height: 150px;
+}
+
+.blue{
+    background-color: #01a1de;
+    text-align: right;
+    font-size: 30px;
+}
+.yellow{background-color: yellow;}
+.green{background-color: green;}
