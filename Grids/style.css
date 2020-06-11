@@ -1,0 +1,30 @@
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 400px;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: bold;
+    width: 50%;
+    background-color: lightgrey;
+}
+
+.red{
+    background-color: red;
+    grid-column: 1 / 3;
+}
+.blue{background-color: blue;}
+.green{background-color: green;}
+.yellow{
+    background-color: yellow;
+    grid-column: 2 / 4;
+}
+.cyan{background-color: cyan;}
+.pink{background-color: pink;}
+.purple{background-color: purple;}
+.turqoise{
+    background-color: turquoise;
+    grid-row: 3/ 5;
+}
+.lime{background-color: lime;}
