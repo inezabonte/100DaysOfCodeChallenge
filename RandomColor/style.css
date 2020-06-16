@@ -1,0 +1,23 @@
+h1{
+    font-family: monospace;
+}
+
+p{
+    font-family: monospace;
+    font-size: 16px;
+    font-weight: bold;
+}
+.colour{
+    width: 300px;
+    height: 300px;
+}
+
+button{
+    border-style: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
