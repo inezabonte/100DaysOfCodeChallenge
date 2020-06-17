@@ -2,7 +2,11 @@ h1{
     font-family: monospace;
 }
 
-p{
+.container{
+    display: grid;
+    grid-template-columns: 300px 300px;
+    gap: 10px;
+    color: white;
     font-family: monospace;
     font-size: 16px;
     font-weight: bold;
@@ -10,6 +14,13 @@ p{
 .colour{
     width: 300px;
     height: 300px;
+    border-radius: 5px;
+}
+
+.complement{
+    width: 300px;
+    height: 300px;
+    border-radius: 5px;
 }
 
 button{
