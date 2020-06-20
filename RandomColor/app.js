@@ -2,15 +2,8 @@ function randomColor(){
     const red = Math.floor(Math.random()*256).toString()
     const green = Math.floor(Math.random()*256).toString()
     const blue = Math.floor(Math.random()*256).toString()
-    return `rgb(${red}, ${green}, ${blue})`;
-}
-
-
-
-let but = document.querySelector(".submit")
-but.addEventListener('click', event => {
-    event.preventDefault()
-    let color = randomColor();
+    
+    let color = `rgb(${red}, ${green}, ${blue})`;
     document.querySelector('.colour').style.backgroundColor = color
     function rgbToHsl() {
 
@@ -70,8 +63,13 @@ but.addEventListener('click', event => {
         }
     
         return "hsl(" + h + "," + s + "%," + l + "%)";
-            
-    
     }
+
     document.querySelector(".complement").style.backgroundColor = rgbToHsl();
-} )
+}
+
+
+randomColor();
+
+let but = document.querySelector(".submit")
+but.addEventListener('click',randomColor )
