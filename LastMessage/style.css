@@ -58,7 +58,10 @@ input{
     font-weight: 600;
     color: var(--text-color);
 }
+ input:focus{
+   outline: 0;
 
+}
 .messages{
     font-family: var(--main-font);
     color: var(--text-color);
@@ -80,6 +83,10 @@ input{
     color: white;
     background-color: #3636C9;
     border-style: none;
+}
+
+.submit:active{
+  transform: scale(0.98);
 }
 
 .theme-switch-wrapper {
