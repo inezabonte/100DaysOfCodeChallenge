@@ -2,9 +2,9 @@ let todoItems = [];
 
 function addTodo(text) {
     const todo = {
-        text,
-        checked: false,
-        id: Date.now()
+      text,
+      checked: false,
+      id: Date.now()
     }
 
     todoItems.push(todo);
@@ -14,30 +14,29 @@ function addTodo(text) {
       <input id="${todo.id}" type="checkbox"/>
       <label for="${todo.id}" class="tick js-tick"></label>
       <span>${todo.text}</span>
-      <button class="delete-todo js-delete-todo">
-      <i class="material-icons">delete</i>
-      </button>
+      <button class="delete-todo js-delete-todo">Delete</button>
     </li>
   `);
 }
 
 function toggleDone(key) {
-    const index = todoItems.findIndex(item => item.id === Number(key));
-    todoItems[index].checked = !todoItems[index].checked;
+  const index = todoItems.findIndex(item => item.id === Number(key));
+  todoItems[index].checked = !todoItems[index].checked;
   
-    const item = document.querySelector(`[data-key='${key}']`);
-    if (todoItems[index].checked) {
-      item.classList.add('done');
-    } else {
-      item.classList.remove('done');
-    }
+  const item = document.querySelector(`[data-key='${key}']`);
+  if (todoItems[index].checked) {
+    item.classList.add('done');
+  } else {
+    item.classList.remove('done');
   }
+}
 
-  function deleteTodo(key) {
-    todoItems = todoItems.filter(item => item.id !== Number(key));
-    const item = document.querySelector(`[data-key='${key}']`);
-    item.remove();
-  }
+
+function deleteTodo(key) {
+  todoItems = todoItems.filter(item => item.id !== Number(key));
+  const item = document.querySelector(`[data-key='${key}']`);
+  item.remove();
+}
 
 const form = document.querySelector('.js-form');
 form.addEventListener('submit', event => {
