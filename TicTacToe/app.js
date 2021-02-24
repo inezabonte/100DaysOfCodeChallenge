@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     
     const squares = document.querySelectorAll(".grid div");
-    const playerDisplay = document.querySelector('#player');
 
     let currentPlayer = 'Player O';
 
@@ -13,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const squareArray = Array.from(squares);
         const index = squareArray.indexOf(e.target);
         console.log(index);
-        playerDisplay.innerHTML = currentPlayer; 
 
         if(currentPlayer === 'Player X') {
             currentPlayer = 'Player O';

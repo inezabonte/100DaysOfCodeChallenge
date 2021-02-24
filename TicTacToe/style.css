@@ -20,7 +20,6 @@ body{
 }
 
 .title{
-    font-family: 'Montserrat', sans-serif;
     color: #00FF84;
     font-weight: bold;
     font-size: 1.75rem;
@@ -47,19 +46,20 @@ body{
     display: flex;
     margin-bottom: 20px;
     align-items: center;
-    width: max-content;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .score-badge{
-    width: 200px;
+    width: 150px;
     height: 50px;
     color: #007BFF;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 10px;
     border-radius: 40px;
-    font-size: 2rem;
+    font-weight: bold;
+    font-size: 1.25rem;
 }
 
 .scorecount{
@@ -74,17 +74,4 @@ body{
 
 .playero{
     background-color: #00FF84;
-}
-
-.playerX{
-    background-image: url('theX.png');
-}
-
-.playerO{
-    background-image: url('theO.png');
-}
-
-h3{
-    display: inline;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
